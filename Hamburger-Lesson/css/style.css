@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+.box {
+  height: 300px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  background-color: #eee;
+}
+/* ---------------------------- */
+/* ---- ハンバーガーアイコン ---- */
+/* ---------------------------- */
+
+#hm-icon {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+/* z-indexを黒背景より高くすることで、ボタンをメニュー開封後も一番上に */
+
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  /* 全てのアニメーションを0.4秒に */
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+/* 棒の箱 */
+
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+}
+/* 棒全体の設定 */
+
+
+.menu-trigger span:nth-child(1) {
+  top: 0;
+}
+.menu-trigger span:nth-child(2) {
+  top: 20px;
+}
+.menu-trigger span:nth-child(3) {
+  bottom: 0;
+}
+/* 各棒の位置 */
+
+
+/* =====ここからボタン押した後の処理===== */
+.menu-trigger.active span:nth-child(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+  background-color: #fff;
+}
+/* 1番上の棒を↗にして白く */
+
+
+.menu-trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+/* 真ん中のボタンを透明にして隠す */
+
+
+.menu-trigger.active span:nth-child(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+  background-color: #fff;
+}
+/* 1番下の棒を↖にして白く */
+/* ------------------------ */
+/* ------ spメニュー ------ */
+/* ------------------------ */
+#sp-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  min-height: 100%;
+  /* 親要素bodyに対してのheight */
+  display: none;
+  z-index: 9;
+}
+/* z-indexをボタンより下に */
+
+#sp-menu li {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#sp-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
