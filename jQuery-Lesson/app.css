@@ -1,22 +1,22 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .box1 {
-  display: none;
-  background-color: #FF0000;
+  background-color: #FFFFFF;
   height: 200px;
   width: 200px;
+  float: left;
 }
 
-.box2 {
-  background-color: #FF0000;
-  height: 200px;
-  width: 200px;
+.bg1 {
+  background-color: #FFAAAA;
 }
 
-.box2-ext {
-  border: 10px solid black;
+.bg2 {
+  background-color: #FFBBBB;
+}
+
+.bg3 {
+  background-color: #FFCCCC;
+}
+
+.bg4 {
+  background-color: #FFDDDD;
 }

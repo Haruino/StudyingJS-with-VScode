@@ -1,22 +1,26 @@
-$(function (){
-  $('.box1').slideDown(1000, function (){
-    $('.box1').css({
-      'background-color': '#0000FF',
-      'width': '200px',
-      'height': '100px'
-    }).slideUp(1000);
+/* 
+  $(function(){
+  $('.bg1').on('click', function(){
+    $('.bg1').slideUp();
+  });
+
+  $('.bg2').on('click', function(){
+    $('.bg2').slideUp();
+  });
+
+  $('.bg3').on('click', function(){
+    $('.bg3').slideUp();
+  });
+
+  $('.bg4').on('click', function(){
+    $('.bg4').slideUp();
+  });
+}); 
+*/
+
+$(function(){
+  $('.box1').on('click', function(){
+    $(this).slideUp();
   });
 });
-
-  /* slideDown()の引数にfunctionを書き加えることで、スライドダウンした後に
-  functionを実行することができるようになる */
-
-
-  $(function(){
-    $('.box2').on('click', function(){
-      $('.box2').addClass('box2-ext');
-    });
-    $('.box2').mouseout('click', function(){
-      $('.box2').removeClass('box2-ext');
-    });
-  });
+// クリックされた要素のみslideUp
