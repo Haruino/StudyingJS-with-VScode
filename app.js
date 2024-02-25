@@ -39,8 +39,8 @@ function getJShand(){
   let js_hand_num = Math.floor( Math.random() * 3 );
   // Math.floor() 対象の値の小数点以下を切り捨てた値を取得
   // Math.random() 0 以上 1 未満のランダムな浮動小数点数を作成して返す
-  // 0～2までのランダムな整数値を生成,
-  // 関数内の「3」は、ランダム生成したい整数値の+1を指定 => Math.floor( Math.random() * 3 ) + 1 でもOK
+  /* 0～2までのランダムな整数値を生成,関数内の「3」は、ランダム生成したい整数値
+  の+1を指定 => Math.floor( Math.random() * 3 ) + 1 でもOK */
 
   let hand_name;
 
