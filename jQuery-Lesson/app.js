@@ -18,9 +18,17 @@
 }); 
 */
 
+/*
 $(function(){
   $('.box1').on('click', function(){
     $(this).slideUp();
   });
 });
+*/
 // クリックされた要素のみslideUp
+
+$(function(){
+  $('button').on('click', function(){
+    $('ul').children().css('color','red');
+  });
+});
